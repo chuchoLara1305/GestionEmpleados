@@ -1,0 +1,37 @@
+Para el correcto funcionamiento de las clases deberan instalar:
+
+-Servidor local [mysql]
+
+	°WorkBench mysql 
+	///Se descarga la version 5.7.41 para windows (32 o 64 bits)en https://downloads.mysql.com/archives/community/
+	    Se sigue el proceso de instalacion https://www.youtube.com/watch?v=Y2FiZQd2IRw
+	
+	°Conector de java 1.5.47 en https://downloads.mysql.com/archives/c-j/
+	/// Se descomprime el archivo y se utiliza el .bin, en una carpeta nueva que podemos llamar "Conexion" dentro del sistema. 
+	    Click derecho Build Path > Add to Build Path
+
+-Archivo en carpeta nombrado como .xml
+	°Crear una carpeta en el escritorio, posteriormente crear un documento de texto con terminacion .xml
+	Dentro del archivo, colocar la siguiente linea:
+
+//
+	<?xml version="1.0" encoding="utf-8" standalone="no"?><EMPLEADOS></EMPLEADOS>
+
+														//
+
+
+///////////////////////////////////// PARA CORREGIR ERRORES EN LAS CLASES /////////////////////////////////////
+PARA LA CLASE Almacenamiento_Archivo:
+linea 25: documento = builder.parse(new File ("C:\\Users\\migue\\OneDrive\\Escritorio\\XML\\AlmacenamientoArchivo.xml.txt"));	
+Cambiar la ruta del new File por la ruta del documento .xml que esta en el Escritorio.
+
+linea 73: StreamResult salida = new StreamResult(new File ("C:\\Users\\migue\\OneDrive\\Escritorio\\XML\\AlmacenamientoArchivo.xml.txt"));
+Cambiar la ruta del new File por la ruta del documento .xml que esta en el Escritorio.
+
+
+PARA LA CLASE Almacenmaiento_BaseDatos:
+linea 15: public static final String USUARIO = "root";
+En caso de haber cambiado el nombre del usuario en el momento de instalacion, modificarlo.
+
+linea 16: public static final String CLAVE = "muse2004";
+En caso de haber puesto contraseña, modificarla.
