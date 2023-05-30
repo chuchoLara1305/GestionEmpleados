@@ -1,11 +1,34 @@
-package paquete;
+package Almacenamiento;
 
 public class Empleado {
-	private String nombre;
-	private float sueldo;
-	private String afiliacion;
-	private int aniosServicio;
 	
+	public String nombre = "Miguel Angel Reyes Gonzalez";
+	public float sueldo = 150000.00f;
+	public String afiliacion = "ABC1234ABC";
+	public int añosDeServicio = 4;
+	public String telefono = "+522292122412";
+	public String correo = "thespot@gmail.com";
+	public int edad = 47;
+	
+	
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -24,16 +47,11 @@ public class Empleado {
 	public void setAfiliacion(String afiliacion) {
 		this.afiliacion = afiliacion;
 	}
-	public int getAniosServicio() {
-		return aniosServicio;
+	public int getAñosDeServicio() {
+		return añosDeServicio;
 	}
-	public void setAniosServicio(int aniosServicio) {
-		this.aniosServicio = aniosServicio;
-	}
-	
-	@Override
-	public String toString() {
-		return "Nombre: "+nombre+"\n"+"Sueldo: "+sueldo+"\n"+"Afiliación: "+afiliacion+"\n"+"Años de servicio: "+aniosServicio;
+	public void setAñosDeServicio(int añosDeServicio) {
+		this.añosDeServicio = añosDeServicio;
 	}
 	
 }
