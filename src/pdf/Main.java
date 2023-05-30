@@ -7,10 +7,14 @@ public class Main {
 		Impresora imp;
 		Empleado emp=new Empleado();
 		Scanner sc= new Scanner(System.in);
+		/*
 		emp.setNombre("Darío Méndez");
 		emp.setSueldo(120000.00f);
 		emp.setAfiliacion("AIo1987pqw");
 		emp.setAniosServicio(15);
+		*/
+		System.out.println("Ingrese nombre del empleado: ");
+		String nombre=sc.nextLine();
 		System.out.println("Seleccione una opción para imprimir los datos: ");
 		System.out.println("a) PDF");
 		System.out.println("b) Bloc de notas");
