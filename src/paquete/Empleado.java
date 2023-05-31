@@ -53,5 +53,14 @@ public class Empleado {
 	public void setAñosDeServicio(int añosDeServicio) {
 		this.añosDeServicio = añosDeServicio;
 	}
-	
+	@Override
+	public String toString() {
+		return 
+		"Nombre: "+
+		nombre+"\n"+"Sueldo: "+
+		sueldo+"\n"+"Afiliación: "
+		+afiliacion+"\n"+"Años de servicio: "+
+		añosDeServicio+"\n"+"Teléfono: "+telefono+
+		"\n"+"Correo: "+correo+"\n"+"Edad: "+edad;
+	}
 }
