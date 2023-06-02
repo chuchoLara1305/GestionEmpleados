@@ -1,5 +1,5 @@
 package graficacion;
-
+import Almacenamiento.*;
 import java.util.ArrayList;
 
 public class Graficar extends Graficacion {
