@@ -6,10 +6,6 @@ public class Mensajeria {
 	@SuppressWarnings({ "resource", "unused" })
 	public static void main(String[] args) {
 		Empleado xala = new Empleado("Roberto", 19, 164456.99f, "+5212292677486", "migua.garcia.rg21@gmail.com", 4, "ABC512DEF");
-		/*
-		 * zauron05@gmail.com
-		 * alejandroparra442@gmail.com
-		 * */
 		Scanner tecla = new Scanner(System.in);
 		int a;
 		out.println("MENU DE OPCIONES DE ENVIO");
@@ -22,7 +18,7 @@ public class Mensajeria {
 		switch(a) {
 		case 1: 
 			//CORREO GMAIL
-			Correo c = new Correo("garcia.rg21@gmail.com", "guitar.jpg", "wfsumdrvhemqawjy", "C:\\Users\\Tikroo\\Documents\\Envios\\guitar.jpg", "Datos del empleado: " + xala.getNombre());
+			Correo c = new Correo("garcia.rg21@gmail.com", "guitar.jpg", "hykgg", "C:\\Users\\Tikroo\\Documents\\Envios\\guitar.jpg", "Datos del empleado: " + xala.getNombre());
 			System.out.println(c.enviar(xala));
 			break;
 		case 2:
