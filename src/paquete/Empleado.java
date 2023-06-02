@@ -9,7 +9,14 @@ public class Empleado {
 	public String telefono = "+522292122412";
 	public String correo = "thespot@gmail.com";
 	public int edad = 47;
-	
+	public Empleado() {
+		
+	}
+	public Empleado(String nombre, int edad, float sueldo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sueldo = sueldo;
+    }
 	
 	public int getEdad() {
 		return edad;
