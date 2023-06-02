@@ -1,19 +1,13 @@
 package graficacion;
-
-/*
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-*/
+import Almacenamiento.*;
 import java.util.ArrayList;
-//import java.sql.*;
+import java.sql.*;
 
 public class Database {
 	
 	public ArrayList<Empleado> ObtenerFuenteDatosManual(){
 		
-		//creacion de instanciamientos de la clase tipo "Empleado"(prueba)
+		//creacion de instancias manual de la clase "Empleado"(prueba)
 		Empleado empleado01 = new Empleado("Arturo", 33, 500000f); 	
 		Empleado empleado02 = new Empleado("Taylor", 22, 130131f);
 		Empleado empleado03 = new Empleado("Paola", 20, 5455f);
@@ -36,20 +30,21 @@ public class Database {
 		
 	}
 	
-/*	public ArrayList<Empleado> ObtenerFuenteDatosMySQL(){
+	public ArrayList<Empleado> ObtenerFuenteDatosMySQL(){
 		
 		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 		try {
 		 			
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/whitetower","root","root");  
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sys?useSSL=false","root","root"); 
+			
 	  
 			Statement stmt=con.createStatement();  
-			ResultSet rs=stmt.executeQuery("select * from empleados");  
+			ResultSet rs=stmt.executeQuery("select * from tabla");  
 			while(rs.next())  {
-				Empleado empleado = new Empleado(rs.getString("Nombre"), rs.getInt("Edad"), rs.getDouble("Sueldo")); 	
-				System.out.println(rs.getInt(1)+"  "+rs.getString("Nombre")+"  "+rs.getInt(3)+"  "+rs.getBigDecimal(4));
+				Empleado empleado = new Empleado(rs.getString("Nombre"), rs.getInt("Edad"), rs.getFloat("Sueldo")); 	
+				//System.out.println(rs.getInt(1)+"  "+rs.getString("Name")+"  "+rs.getInt(4)+"  "+rs.getBigDecimal(5));
 				empleados.add(empleado);
 			}
 			con.close();  
@@ -62,5 +57,5 @@ public class Database {
 			return empleados;
 		}
 		
-	}*/
+	}
 }
