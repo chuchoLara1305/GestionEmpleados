@@ -34,7 +34,7 @@ public class PDF implements Impresion{
 	         documento.add(new Paragraph("Información de empleados"));
 	         documento.add(new Paragraph("Nombre: "+emp.getNombre()));
 	         documento.add(new Paragraph("Sueldo: "+emp.getSueldo()));
-	         documento.add(new Paragraph("Afiliación: "+emp.getAfiliacion()));
+	         documento.add(new Paragraph("Afiliación: "+emp.getAFiliacion()));
 	         documento.add(new Paragraph("Años de servicio: "+emp.getAñosDeServicio()));
 	         documento.add(new Paragraph("Teléfono: "+emp.getTelefono()));
 	         documento.add(new Paragraph("Correo: "+emp.getCorreo()));
