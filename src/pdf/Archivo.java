@@ -19,7 +19,7 @@ public class Archivo implements Impresion {
 	         escritor.newLine();
 	         escritor.write("Sueldo: "+emp.getSueldo());
 	         escritor.newLine();
-	         escritor.write("Afiliación: "+emp.getAfiliacion());
+	         escritor.write("Afiliación: "+emp.getAFiliacion());
 	         escritor.newLine();
 	         escritor.write("Años de servicio: "+emp.getAñosDeServicio());
 	         escritor.newLine();
