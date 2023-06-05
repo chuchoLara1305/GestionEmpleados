@@ -1,4 +1,4 @@
-package Proyecto01;
+package validacion;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,13 +21,14 @@ public class Validacion {
 
 	//BLOQUE DE NOMBRE
 	public static boolean ValidarNombre(String entrada){
-		String regex =	"^(?!.*\s{2,})[A-ZÁÉÍÓÚÜÑ]+(?: [A-ZÁÉÍÓÚÜÑ]+)*$";
+		//String regex = "^(?!.*\s{2,})[A-ZÁÉÍÓÚÜÑ]+(?: [A-ZÁÉÍÓÚÜÑ]+)*$";
+		String regex = "^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]*[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(entrada);
 		if(matcher.matches()) {
 			return true;}
 		else {
-			System.out.println("Dato ingresado incorrectamente");
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
@@ -99,7 +100,7 @@ public class Validacion {
 		if (matcher.matches()) {
 			return true;}
 		else {
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
-}
