@@ -13,7 +13,7 @@ public class Validacion {
 		if(matcher.matches()) {
 			return true;}
 		else {
-			System.out.println("Dato ingresado incorrectamente");
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
@@ -42,7 +42,7 @@ public class Validacion {
 		if(matcher.matches()) {
 			return true;}
 		else {
-			System.out.println("Dato ingresado incorrectamente");
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
@@ -56,7 +56,7 @@ public class Validacion {
 		if(matcher.matches()) {
 			return true;}
 		else {
-			System.out.println("Dato ingresado incorrectamente");
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
@@ -70,7 +70,7 @@ public class Validacion {
 		if (matcher.matches()) {
 			return true;
 		} else {
-			System.out.println("Dato ingresado incorrectamente");
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
@@ -78,12 +78,13 @@ public class Validacion {
 
 	//BLOQUE DE TELEFONO
 	public static boolean validarTelefono(String entrada) {
-		String regex = "^+52\\d{10}$";
+		String regex = "^\\+52\\d{10}$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(entrada);
 		if (matcher.matches()) {
 			return true;}
 		else {
+			System.out.println("Dato ingresado incorrectamente, ingrese nuevamente");
 			return false;
 		}
 	}
