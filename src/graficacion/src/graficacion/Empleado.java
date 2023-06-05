@@ -1,12 +1,11 @@
 package graficacion;
 
 public class Empleado {
-	public Empleado(String nombre, int edad, double sueldo) {
-		super();
+	public Empleado(String nombre, int edad, float sueldo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sueldo = sueldo;
-	}
+		}
 	private String nombre;
 	private int edad;
 	private double sueldo;
