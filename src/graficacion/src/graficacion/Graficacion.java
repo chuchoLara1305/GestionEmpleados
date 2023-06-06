@@ -37,6 +37,8 @@ public abstract class Graficacion {
 			Workbook workbook = new Workbook();
 	
 			Worksheet worksheet = workbook.getWorksheets().get(0);
+			worksheet.getCells().setColumnWidth(0, 22);
+
 			
 			worksheet.getCells().get("A1").putValue(tituloGrupo);	
 			worksheet.getCells().get("B1").putValue("Cantidad");
