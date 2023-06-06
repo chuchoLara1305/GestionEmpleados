@@ -87,8 +87,6 @@ public class Graficar extends Graficacion {
 		gruposEdad.add(grupoEdad7);
 		gruposEdad.add(grupoEdad8);
 		
-		//graficar(gruposEdad);
-		
 		return gruposEdad;
 	}
 	
@@ -133,7 +131,6 @@ public class Graficar extends Graficacion {
 		grupoSueldos.add(grupoSueldo5);
 		grupoSueldos.add(grupoSueldo6);
 		
-		//graficar(grupoSueldos);
 		return grupoSueldos;
 		
 	}
