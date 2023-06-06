@@ -44,6 +44,9 @@ public abstract class Graficacion {
 			for(int i=0; i<grupos.size(); i ++) {
 				Grupo grupito = grupos.get(i);
 				
+				//System.out.println (grupito.getNombre());
+				//System.out.println(grupito.getValor());
+				
 				worksheet.getCells().get("A"+ (i + 2)).putValue(grupito.getNombre());
 				worksheet.getCells().get("B"+ (i + 2)).putValue(grupito.getValor());
 				
@@ -60,7 +63,7 @@ public abstract class Graficacion {
 			chart.getTitle().setText(titulo);
 			
 			workbook.save(nombreArchivo + ".xlsx", SaveFormat.XLSX);
-			System.out.println("Archivo generado exitosamente.");
+			System.out.println("Archivo generado exitosamente en: " + System.getProperty("user.dir") + "\\" + nombreArchivo + ".xlsx");
 		}catch(Exception e) {
 			System.out.println(e);
 		}
@@ -118,7 +121,8 @@ public abstract class Graficacion {
 				chart.getTitle().setText(titulo);
 			}
 			workbook.save(nombreArchivo + ".xlsx", SaveFormat.XLSX);
-			System.out.println("Archivo generado exitosamente.");
+			System.out.println("Archivo generado exitosamente en: " + System.getProperty("user.dir") + "\\" + nombreArchivo + ".xlsx");
+			//System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
 		}catch(Exception e) {
 			System.out.println(e);
