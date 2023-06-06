@@ -1,5 +1,4 @@
 package graficacion;
-
 import java.util.ArrayList;
 
 import com.aspose.cells.Chart;
@@ -38,16 +37,12 @@ public abstract class Graficacion {
 	
 			Worksheet worksheet = workbook.getWorksheets().get(0);
 			worksheet.getCells().setColumnWidth(0, 22);
-
 			
 			worksheet.getCells().get("A1").putValue(tituloGrupo);	
 			worksheet.getCells().get("B1").putValue("Cantidad");
 			
 			for(int i=0; i<grupos.size(); i ++) {
 				Grupo grupito = grupos.get(i);
-				
-				System.out.println (grupito.getNombre());
-				System.out.println(grupito.getValor());
 				
 				worksheet.getCells().get("A"+ (i + 2)).putValue(grupito.getNombre());
 				worksheet.getCells().get("B"+ (i + 2)).putValue(grupito.getValor());
@@ -65,6 +60,7 @@ public abstract class Graficacion {
 			chart.getTitle().setText(titulo);
 			
 			workbook.save(nombreArchivo + ".xlsx", SaveFormat.XLSX);
+			System.out.println("Archivo generado exitosamente.");
 		}catch(Exception e) {
 			System.out.println(e);
 		}
@@ -103,8 +99,8 @@ public abstract class Graficacion {
 				for(int i=0; i<grupos.size(); i ++) {
 					Grupo grupito = grupos.get(i);
 					
-					System.out.println (grupito.getNombre());
-					System.out.println(grupito.getValor());
+					//System.out.println (grupito.getNombre());
+					//System.out.println(grupito.getValor());
 					
 					worksheet.getCells().get("A"+ (i + 2)).putValue(grupito.getNombre());
 					worksheet.getCells().get("B"+ (i + 2)).putValue(grupito.getValor());
@@ -122,6 +118,8 @@ public abstract class Graficacion {
 				chart.getTitle().setText(titulo);
 			}
 			workbook.save(nombreArchivo + ".xlsx", SaveFormat.XLSX);
+			System.out.println("Archivo generado exitosamente.");
+
 		}catch(Exception e) {
 			System.out.println(e);
 		}
